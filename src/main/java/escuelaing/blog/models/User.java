@@ -1,129 +1,63 @@
 package escuelaing.blog.models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
 /**
  * User
  */
+@Data
+@Entity
+@Table(name = "users")
 public class User {
 
-  String name = "";
-  String lastName = "";
-  String email = "";
-  String tp = "";
-  String numDoc = "";
-  String uniInv = "";
-  String uniEst = "";
-  String code = "";
-  String cel = "";
-  Boolean wa = false;
-  Boolean veg = false;
-  String rol = "";
-  String level = "";
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-  public User() {
-  }
+  @Column(nullable = false)
+  String name;
 
-  public String getName() {
-    return name;
-  }
+  @Column(nullable = false)
+  String lastName;
 
-  public void setName(String name) {
-    this.name = name;
-  }
+  @Column(nullable = false)
+  String email;
 
-  public String getLastName() {
-    return lastName;
-  }
+  @Column(nullable = false)
+  String tp;
 
-  public void setLastName(String lastName) {
-    this.lastName = lastName;
-  }
+  @Column(nullable = false)
+  Long numDoc;
 
-  public String getEmail() {
-    return email;
-  }
+  @Column(nullable = false)
+  String uniInv;
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+  @Column(nullable = false)
+  String uniEst;
 
-  public String getTp() {
-    return tp;
-  }
+  @Column(nullable = false)
+  String code;
 
-  public void setTp(String tp) {
-    this.tp = tp;
-  }
+  @Column(nullable = false)
+  String cel;
 
-  public String getNumDoc() {
-    return numDoc;
-  }
+  @Column(nullable = false)
+  Boolean wa;
 
-  public void setNumDoc(String numDoc) {
-    this.numDoc = numDoc;
-  }
+  @Column(nullable = false)
+  Boolean veg;
 
-  public String getUniInv() {
-    return uniInv;
-  }
+  @Column(nullable = false)
+  String rol;
 
-  public void setUniInv(String uniInv) {
-    this.uniInv = uniInv;
-  }
-
-  public String getUniEst() {
-    return uniEst;
-  }
-
-  public void setUniEst(String uniEst) {
-    this.uniEst = uniEst;
-  }
-
-  public String getCode() {
-    return code;
-  }
-
-  public void setCode(String code) {
-    this.code = code;
-  }
-
-  public String getCel() {
-    return cel;
-  }
-
-  public void setCel(String cel) {
-    this.cel = cel;
-  }
-
-  public Boolean getWa() {
-    return wa;
-  }
-
-  public void setWa(Boolean wa) {
-    this.wa = wa;
-  }
-
-  public Boolean getVeg() {
-    return veg;
-  }
-
-  public void setVeg(Boolean veg) {
-    this.veg = veg;
-  }
-
-  public String getRol() {
-    return rol;
-  }
-
-  public void setRol(String rol) {
-    this.rol = rol;
-  }
-
-  public String getLevel() {
-    return level;
-  }
-
-  public void setLevel(String level) {
-    this.level = level;
-  }
+  @Column(nullable = false)
+  String level;
 
 }

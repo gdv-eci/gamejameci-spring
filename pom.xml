@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>escuelaing</groupId>
-	<artifactId>blog</artifactId>
+	<artifactId>GameJamEci</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>blog</name>
-	<description>A blog</description>
+	<name>GameJamEci</name>
+	<description>Api for the GameJamEci</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -43,7 +43,8 @@
 		<dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.16.6</version>
+      <version>1.18.12</version>
+			<scope>provided</scope>
     </dependency>
 
 		<dependency>

@@ -25,12 +25,20 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public User saveUser(User user) {
-    User tmp = ur.findByNumDoc(user.getNumDoc());
+    if (!((Long)ur.count()).equals(0L)) {
+      User tmp = ur.findByNumDoc(user.getNumDoc());
+      if (tmp.getNumDoc().equals(user.getNumDoc()))
+        user.setId(tmp.getId());
+    }
     return ur.save(user);
   }
 
   @Override
   public User Update(User user) {
+    if (!((Long)ur.count()).equals(0L)) {
+      User tmp = ur.findByNumDoc(user.getNumDoc());
+      user.setId(tmp.getId());
+    }
     return ur.save(user);
   }
 

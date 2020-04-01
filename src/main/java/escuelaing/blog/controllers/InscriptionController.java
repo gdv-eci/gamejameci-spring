@@ -34,7 +34,7 @@ public class InscriptionController {
       return new ResponseEntity<>(us.getAllUsers(), HttpStatus.OK);
     } catch (Exception ex) {
       Logger.getLogger(InscriptionController.class.getName()).log(Level.SEVERE, null, ex);
-      return new ResponseEntity<>("Not found", HttpStatus.NOT_FOUND);
+      return new ResponseEntity<>("No user exist", HttpStatus.NOT_FOUND);
     }
   }
 
@@ -44,7 +44,7 @@ public class InscriptionController {
       return new ResponseEntity<>(us.saveUser(user), HttpStatus.OK);
     } catch (Exception ex) {
       Logger.getLogger(InscriptionController.class.getName()).log(Level.SEVERE, null, ex);
-      return new ResponseEntity<>("Not found", HttpStatus.NOT_FOUND);
+      return new ResponseEntity<>("Can't save user", HttpStatus.NOT_FOUND);
     }
   }
 
@@ -54,7 +54,7 @@ public class InscriptionController {
       return new ResponseEntity<>(us.Update(user), HttpStatus.OK);
     } catch (Exception ex) {
       Logger.getLogger(InscriptionController.class.getName()).log(Level.SEVERE, null, ex);
-      return new ResponseEntity<>("Not found", HttpStatus.NOT_FOUND);
+      return new ResponseEntity<>("Can't update user", HttpStatus.NOT_FOUND);
     }
   }
   

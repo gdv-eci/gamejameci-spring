@@ -8,11 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * User
  */
 @Data
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
@@ -33,7 +35,7 @@ public class User {
   @Column(nullable = false)
   String tp;
 
-  @Column(nullable = false)
+  @Column(nullable = false, unique = true)
   Long numDoc;
 
   @Column(nullable = false)
